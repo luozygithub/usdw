@@ -1,34 +1,34 @@
 import React, {useEffect, useRef, useState} from 'react';
 import styled from "styled-components";
 
-import logo from "../imgs/logo.jpg"
-import earth from "../imgs/earth.png"
-import bg1 from "../imgs/bg1.jpg"
-import bg2 from "../imgs/bg2.jpg"
-import bg3 from "../imgs/img_1.png"
-import bg4 from "../imgs/bg4.png"
-import icon1 from "../imgs/icon1.jpg"
-import icon2 from "../imgs/icon2.jpg"
-import icon3 from "../imgs/icon3.jpg"
-import earth2 from "../imgs/img_2.png"
+import logo from "../imgs/logo.webp"
+import earth from "../imgs/earth.webp"
+import bg1 from "../imgs/bg1.webp"
+import bg2 from "../imgs/bg2.webp"
+import bg3 from "../imgs/bg3.jpg"
+import bg4 from "../imgs/bg4.webp"
+import icon1 from "../imgs/icon1.webp"
+import icon2 from "../imgs/icon2.webp"
+import icon3 from "../imgs/icon3.webp"
+import earth2 from "../imgs/img_2.webp"
 
-import link1 from "../imgs/img_3.png"
-import link2 from "../imgs/img_4.png"
-import link3 from "../imgs/img_5.png"
-import link4 from "../imgs/img_6.png"
-import link5 from "../imgs/img_7.png"
-import link6 from "../imgs/img_8.png"
+import link1 from "../imgs/img_3.webp"
+import link2 from "../imgs/img_4.webp"
+import link3 from "../imgs/img_5.webp"
+import link4 from "../imgs/img_6.webp"
+import link5 from "../imgs/img_7.webp"
+import link6 from "../imgs/img_8.webp"
 
-import leftImg from "../imgs/img_9.png"
-import logo2 from "../imgs/logo2.png"
-import logo3 from "../imgs/logo3.png"
-import binance from "../imgs/img_10.png"
-import huobi from "../imgs/img_11.png"
-import coinbase from "../imgs/img_12.png"
-import kraken from "../imgs/img_13.png"
-import crypto from "../imgs/img_14.png"
-
-import Pdf from "../imgs/Pdf.png"
+import leftImg from "../imgs/img_9.webp"
+import logo2 from "../imgs/logo2.webp"
+import logo3 from "../imgs/logo3.webp"
+import binance from "../imgs/img_10.webp"
+import huobi from "../imgs/img_11.webp"
+import coinbase from "../imgs/img_12.webp"
+import kraken from "../imgs/img_13.webp"
+import crypto from "../imgs/img_14.webp"
+import contentbg from "../imgs/contentbg.jpg"
+import Pdf from "../imgs/Pdf.webp"
 
 function DaoHome(props) {
     const DaoHome = styled.div`
@@ -75,7 +75,7 @@ function DaoHome(props) {
       .page-box {
         padding: 0 20%;
         margin: 0 auto;
-        height: 100vh;
+        min-height: 100vh;
       }
 
       .page1 {
@@ -116,7 +116,7 @@ function DaoHome(props) {
 
       .page2 {
         background: url("${bg1}");
-        background-size: 100%;
+        background-size: 100% 100%;
       }
 
       .page3 {
@@ -160,18 +160,49 @@ function DaoHome(props) {
         padding: 0;
 
         .content1 {
-          width: 100%;
-          height: 80vh;
+          width: 70vw;
+          height: 70vh;
           text-align: center;
+          margin: 0 auto;
+          border-radius: 30px;
+          box-shadow: #cccccc 0px 0px 50px;
+          overflow: hidden;
+          position: relative;
 
-          img {
-            width: 80%;
-            height: 100%;
+          .bg {
+            width: 100%;
+            position: absolute;
+            height: 40%;
+            background: url("${contentbg}");
+            background-size: 100% 100%;
           }
 
+          h2 {
+            font-size: 32px;
+            margin-top: 1.5em;
+            position: relative;
+            z-index: 1;
+            color: #fff;
+          }
+
+          p {
+            line-height: 26px;
+            color: #666;
+            font-family: "Times New Roman";
+          }
+
+          .content {
+            line-height: 28px;
+            margin: 1em 0;
+          }
+
+          .info1 {
+            margin-top: 9em;
+          }
         }
 
         .content2 {
+          margin-top: 4em;
           font-size: 36px;
           color: #666;
           font-weight: bold;
@@ -180,6 +211,7 @@ function DaoHome(props) {
           justify-content: center;
           line-height: 50px;
           text-align: center;
+          margin-bottom: 3em;
 
           .value {
             font-size: 22px !important;
@@ -213,10 +245,25 @@ function DaoHome(props) {
       }
 
       .page5 {
-        padding: 0;
-        background: url("${bg3}");
-        background-size: 100% 100%;
+        background: url("${bg3}") no-repeat;
+        background-size: 100%;
         height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 20%;
+        color: #fff;
+
+        h2 {
+          font-size: 28px;
+        }
+
+        p {
+          color: #eee;
+          margin-top: 3em;
+          line-height: 28px;
+          width: 60%;
+        }
       }
 
       .page6 {
@@ -316,51 +363,63 @@ function DaoHome(props) {
           }
         }
       }
-      .page8{
+
+      .page8 {
         padding: 3em 10%;
-        h2{
+
+        h2 {
           text-align: center;
           font-size: 36px;
-          span{
+
+          span {
             font-size: 14px;
             color: #999;
             font-weight: normal;
             margin-left: 2em;
           }
         }
-        .content{
+
+        .content {
           display: flex;
           margin-top: 6em;
-          .left-img{
+
+          .left-img {
             width: 36vw;
             height: 28vw;
           }
-          .right-content{
+
+          .right-content {
             margin-left: 3em;
             flex: 1;
-            .part1{
+
+            .part1 {
               display: flex;
               align-items: center;
               justify-content: space-between;
-              .part1content{
-                strong{
+
+              .part1content {
+                strong {
                   font-size: 16px;
                 }
-                .info{
+
+                .info {
                   margin-top: 0.5em;
                   margin-bottom: 1em;
                   font-size: 16px;
                   color: #999;
                 }
-                span{
+
+                span {
                   color: #666;
                   font-size: 14px;
                 }
               }
-              img{
+
+              img {
                 width: 100px
               }
-              .download-btn{
+
+              .download-btn {
                 cursor: pointer;
                 width: 140px;
                 height: 50px;
@@ -371,8 +430,9 @@ function DaoHome(props) {
                 background-image: linear-gradient(to right, #008dff, #b8d1ff);
               }
             }
-            .part2{
-           
+
+            .part2 {
+
               .link-list {
                 display: flex;
                 justify-content: space-between;
@@ -405,12 +465,14 @@ function DaoHome(props) {
           }
         }
       }
-      .page9{
+
+      .page9 {
         padding: 0;
         background: url("${bg4}");
         background-size: 100% 100%;
         height: 90vh;
       }
+
       .footer-box {
         background: #1e1e1e;
         width: 100%;
@@ -424,51 +486,60 @@ function DaoHome(props) {
 
           .left {
             color: #fff;
-            .logo-box{
+
+            .logo-box {
               display: flex;
               flex-direction: column;
               align-items: center;
+
               .logo {
                 width: 120px;
               }
             }
-           
 
-            .pdf{
+
+            .pdf {
               display: flex;
               margin-top: 2em;
               align-items: center;
               flex-direction: column;
-              img{
+
+              img {
                 width: 60px;
                 cursor: pointer;
               }
+
               text-align: center;
-              strong{
+
+              strong {
                 margin-top: 2em;
               }
-              span{
+
+              span {
                 margin-top: 0.2em;
                 font-size: 14px;
               }
             }
 
-      
+
           }
 
           .right {
-            .link-list-box{
+            .link-list-box {
               display: flex;
+
               .link-list {
                 width: 230px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 flex-wrap: wrap;
-                strong{
-                  color:#fff;
+
+                strong {
+                  color: #fff;
                   font-size: 20px;
                 }
+
                 .link-item {
                   width: 230px;
                   font-size: 18px;
@@ -482,7 +553,8 @@ function DaoHome(props) {
             }
           }
         }
-        .copyright{
+
+        .copyright {
           font-size: 14px;
           text-align: center;
           color: #cccccc;
@@ -571,7 +643,30 @@ function DaoHome(props) {
             </div>
             <div className="page4 page-box">
                 <div className="content1">
-                    <img src={bg2} alt=""/>
+                    <div className="bg">
+
+                    </div>
+                    <h2>
+                        Lessons Learned from Terra
+                    </h2>
+                    <p className="info1">
+                        As the market finds its footing following several turbulent days, we have the opportunity to
+                        reflect on lessons to be<br/>
+                        learned from the collapse of Terra and its effects on the industry. Namely:
+                    </p>
+                    <div className="content">
+                        Not all so-called “stablecoins” are created equal.<br/>
+                        Algorithmic instruments are not backed 100% by U.S. dollars.<br/>
+                        Fiat-backed stablecoins for payments purposes should not be placed in<br/>
+                        the same category as other types of so-called “stablecoins”.
+                    </div>
+                    <p>
+                        its role as the standards organization for USDC and its growing ecosystem, Centre has been
+                        building principles, stan <br/>
+                        dards and technical specifications for issuers of Centre Standard Stablecoins. One of Centre’s
+                        core standards requires the<br/>
+                        maintenance of high quality, full reserves backing Centre Stablecoins.
+                    </p>
                 </div>
                 <div className="content2">
                     <div className="left">
@@ -586,7 +681,14 @@ function DaoHome(props) {
                 </div>
             </div>
             <div className="page5 page-box">
-
+                <h2>Our Philosophy</h2>
+                <p>
+                    The technology behind USDW makes it possible to exchange value
+                    between people, businesses and financial institutions just like
+                    email between mail services and texts between SMS providers. We
+                    believe by removing artificial economic borders, we can create a
+                    more inclusive global economy.
+                </p>
             </div>
             <div className="page6 page-box">
                 <div className="bg"></div>
